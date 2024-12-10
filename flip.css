@@ -1,0 +1,110 @@
+*
+{
+    padding: none;
+    margin: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body
+{
+    height:100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: mediumpurple;
+}
+
+.carousel
+{
+    height:590px;
+    width:425px;
+    perspective: 1000px;
+}
+
+.carousel-inner
+{
+    height:100%;
+    width:100%;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+}
+.front,.back
+{
+    height:100%;
+    width:100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.front
+{
+    background-image: url("flipcard/user.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+}
+.front h2
+{
+    color:white;
+    line-height: none;
+    padding: none;
+    margin: none;
+}
+.front div
+{
+    color:white
+}
+.front-group
+{
+    height:200px;
+    margin-left: 60px;
+}
+.front button
+{
+    width:200px;
+    height:42px;
+    border-radius: 25px;
+    color:white;
+    background-color: transparent;
+    border:solid 1px white;
+    outline: none;
+}
+.back
+{
+display: flex;
+flex-direction: column;
+align-items: center;
+    background-color: white;
+   transform: rotateY(180deg);
+}
+.back img
+{
+height:190px;
+width:190px;
+}
+.back h1
+{
+    width:400px;
+}
+.back p
+{
+    width:100%;
+}
+.row
+{
+    display: flex;
+    justify-content: space-evenly;
+    width:100%;
+}
+.carousel:hover .carousel-inner
+{
+    transform: rotateY(180deg);
+}
